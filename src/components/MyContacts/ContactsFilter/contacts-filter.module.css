@@ -1,0 +1,9 @@
+.filterInput {
+  width: 200px;
+  margin-top: 5px;
+  outline: none;
+}
+
+.filterInput:focus {
+  border: 2px solid blue;
+}
