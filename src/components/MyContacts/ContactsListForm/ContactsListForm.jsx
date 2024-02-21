@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../../redux/contacts/contacts-slice';
+import { addContact } from '../../../redux/contacts/contacts-operations';
 import { getFilteredContacts } from '../../../redux/selectors';
 
 import styles from './contacts-list-form.module.css';
@@ -22,7 +22,6 @@ const ContactListForm = () => {
 
     if (isDublicate) {
       alert(`${phonebookName.value} is already in contacts`);
-      e.target.reset();
     } else {
       dispatch(
         addContact({
